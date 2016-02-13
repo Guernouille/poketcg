@@ -283,7 +283,13 @@ wBattleMenuSelection:: ; $cbc6
 ; 2 = player whose turn it is has lost the battle
 wBattleFinished:: ; $cc07
 	ds $1
-	ds $6
+	ds $3
+
+; 1 if an Energy card has been played this turn
+; Stays at 0 for Energy cards played with Rain Dance
+wBattleHasPlayedEnergy:: ; $cc0b
+	ds $1
+	ds $2
 	
 ; this seems to hold the current opponent's deck id - 2,
 ; perhaps to account for the two unused pointers at the
